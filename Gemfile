@@ -35,6 +35,10 @@ gem 'simple_form'
 # search gem for Postgres + ActiveRecords
 gem 'pg_search', '~> 2.3.0'
 
+# elasticseach and wrapper
+gem 'elasticsearch', "< 7.14" # to use a supported version of the Elasticsearch Ruby client
+gem 'searchkick', '~> 4.0'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

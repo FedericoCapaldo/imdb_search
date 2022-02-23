@@ -10,7 +10,10 @@ class MoviesController < ApplicationController
       # "
       # @movies = Movie.joins(:director).where(sql_query, query: "%#{params[:query]}%")
       # @movies = Movie.search_by_title_and_synopsis(params[:query])
-      @results = PgSearch.multisearch(params[:query])
+
+      # @results = PgSearch.multisearch(params[:query])
+
+       @movies = Movie.search(params[:query])
     else
       @movies = Movie.all
     end
